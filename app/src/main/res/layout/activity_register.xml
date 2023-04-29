@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 28 April 10102905 Johndy Panca IF10k-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/vheaderBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp"
+            android:background="@drawable/ic_header"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHRegister"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_24dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_12dp"
+            android:text="@string/register"
+            android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+            android:textColor="@color/white"
+            app:drawableStartCompat="@drawable/ic_header_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/vheaderBg" />
+
+        <View
+            android:id="@+id/vShadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:background="@color/shadow_header"
+            app:layout_constraintTop_toBottomOf="@id/vheaderBg" />
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/username"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHRegister" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/email"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Username" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/phone_number"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber">
+
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_100dp"
+                android:buttonTint="@color/light_blue"
+                android:checked="true"
+                android:paddingHorizontal="@dimen/_15dp"
+                android:text="@string/male"
+                android:textColor="@color/font_desc" />
+
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/light_blue"
+                android:paddingHorizontal="@dimen/_15dp"
+                android:text="@string/female"
+                android:textColor="@color/font_desc" />
+
+        </RadioGroup>
+
+
+        <Spinner
+            android:id="@+id/bloodTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:entries="@array/blood_types"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+        <View
+            android:id="@+id/underline"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/bloodTypeSpinner"
+            app:layout_constraintStart_toStartOf="@id/bloodTypeSpinner"
+            app:layout_constraintTop_toBottomOf="@id/bloodTypeSpinner" />
+
+        <Spinner
+            android:id="@+id/rhesusSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:entries="@array/rhesus"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+        <View
+            android:id="@+id/underline2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/rhesusSpinner"
+            app:layout_constraintStart_toStartOf="@id/rhesusSpinner"
+            app:layout_constraintTop_toBottomOf="@id/rhesusSpinner" />
+
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/pass_field"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bloodTypeSpinner" />
+
+
+        <EditText
+            android:id="@+id/retypePasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/retype_password"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+
+
+        <RadioGroup
+            android:id="@+id/typeRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/retypePasswordEditText">
+
+            <RadioButton
+                android:id="@+id/personalRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:buttonTint="@color/light_blue"
+                android:checked="true"
+                android:paddingHorizontal="@dimen/_20dp"
+                android:text="@string/personal"
+                android:textColor="@color/font_desc" />
+
+            <RadioButton
+                android:id="@+id/organizationRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:buttonTint="@color/light_blue"
+                android:paddingHorizontal="@dimen/_20dp"
+                android:text="@string/organization"
+                android:textColor="@color/font_desc" />
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/jobSpinner"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:entries="@array/job_titles"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeRadioGroup" />
+
+        <View
+            android:id="@+id/underlinejob"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@id/jobSpinner"
+            app:layout_constraintStart_toStartOf="@id/jobSpinner"
+            app:layout_constraintTop_toBottomOf="@id/jobSpinner" />
+
+
+        <EditText
+            android:id="@+id/homeAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:backgroundTint="@color/seperator"
+            android:hint="@string/home_address"
+            android:inputType="textPostalAddress"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/underlinejob" />
+
+        <EditText
+            android:id="@+id/defaultLocationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:backgroundTint="@color/seperator"
+            android:drawableEnd="@drawable/ic_blood_needed_location"
+            android:hint="@string/default_location"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/font_desc"
+            android:textColorHint="@color/font_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeAddressEditText" />
+
+
+        <CheckBox
+            android:id="@+id/cbAgreement"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:background="@drawable/selector_check_box"
+            android:button="@null"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/defaultLocationEditText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25dp"
+            android:text="@string/agreement"
+            android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+            android:textColor="@color/seperator"
+            app:layout_constraintBottom_toBottomOf="@id/cbAgreement"
+            app:layout_constraintStart_toEndOf="@id/cbAgreement"
+            app:layout_constraintTop_toTopOf="@id/cbAgreement" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10dp"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+            android:textColor="@color/light_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbAgreement"
+            app:strokeColor="@color/light_blue"
+            app:strokeWidth="@dimen/_2dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

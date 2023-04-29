@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- 28 April 10102905 Johndy Panca IF10k-->
+    
+    <string name="app_name">10120905Latihan2</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="or">OR</string>
+    <string name="connect_facebook">connect with facebook</string>
+    <string name="doesnt">doesn\'t have an account? <b>Register</b></string>
+    <string name="email">email</string>
+    <string name="phone_number">phone number</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string-array name="blood_types">
+        <item>Blood Type</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="rhesus">
+        <item>Rhesus</item>
+        <item>+</item>
+        <item>-</item>
+    </string-array>
+    <string name="register">register</string>
+    <string name="personal">personal</string>
+    <string name="organization">organization</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="agreement">Agree with terms and conditions</string>
+    <string name="default_location">Default Location</string>
+    <string name="home_address">Home Address</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="pass_field">Password</string>
+    <string name="almost_there">Almost There</string>
+    <string name="thankyou">Thank you for registering with us, one more step,\n you need to check your email \n to activate your account</string>
+    <string name="verify">Verify</string>
+    <string name="verify2">verify your account</string>
+    <string name="send">We have send you a verification code to your email</string>
+    <string name="verifyInput">enter verification code</string>
+    <string name="sendmsg">send</string>
+    <string name="verifyResend">doesn\'t get the code? <b>Resend</b></string>
+    <string name="name_profile">Johndy Panca</string>
+    <string name="blood_type">Blood type : AB</string>
+    <string name="_75">75</string>
+    <string name="_100">100</string>
+    <string name="_330">330</string>
+    <string name="blood_received">Blood received</string>
+    <string name="blood_give">Blood give</string>
+    <string name="thanks">Thanks</string>
+    <string name="blood_give_label">Blood give</string>
+    <string name="search_donor">Search Donor</string>
+    <string name="imgsub1">Search donor near you</string>
+    <string name="blood_needed">Blood Needed</string>
+    <string name="img2sub">4 Users need blood</string>
+    <string name="msg">Message</string>
+    <string name="imgsub3">5 news message</string>
+    <string name="report">Donor History</string>
+    <string name="imgsub4">5 Given, 2 Received</string>
+    <string-array name="job_titles">
+        <item>Job</item>
+        <item>Accountant</item>
+        <item>Engineer</item>
+        <item>Software Developer</item>
+        <item>Teacher</item>
+        <item>Doctor</item>
+        <item>Nurse</item>
+        <item>Lawyer</item>
+        <item>Marketing Manager</item>
+        <item>Human Resources Manager</item>
+        <item>Operations Manager</item>
+        <item>Customer Service Representative</item>
+    </string-array>
+</resources>

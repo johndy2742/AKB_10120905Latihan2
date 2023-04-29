@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 28 April 10102905 Johndy Panca IF10k-->
+    <View
+        android:id="@+id/vheaderProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/ic_header_profile"
+        app:layout_constraintDimensionRatio="5:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIcon"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_side_menu"
+        android:drawableEnd="@drawable/ic_notification"
+        android:drawablePadding="@dimen/_24dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_12dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/vheaderProfile" />
+
+    <View
+        android:id="@+id/vShadow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2dp"
+        android:background="@color/seperator"
+        app:layout_constraintTop_toBottomOf="@id/vheaderProfile" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_110dp"
+        android:padding="@dimen/_4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_profile"
+        app:layout_constraintBottom_toBottomOf="@id/vheaderProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vheaderProfile"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_4dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/name_profile"
+        android:textColor="@color/picton_blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivProfile" />
+
+    <TextView
+        android:id="@+id/tvBlood"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_type"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@color/seperator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBlood" />
+
+    <TextView
+        android:id="@+id/bloodGive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/_75"
+        android:textColor="@color/light_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+    <TextView
+        android:id="@+id/bloodReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/_100"
+        android:textColor="@color/light_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/bloodGive"
+        app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+    <TextView
+        android:id="@+id/thx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/_330"
+        android:textColor="@color/light_blue"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/bloodReceived"
+        app:layout_constraintTop_toBottomOf="@id/seperator" />
+
+    <TextView
+        android:id="@+id/tvBloodReceivedlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_received"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/bloodReceived"
+        app:layout_constraintStart_toStartOf="@id/bloodReceived"
+        app:layout_constraintTop_toBottomOf="@id/bloodReceived" />
+
+    <TextView
+        android:id="@+id/tvBloodGivelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/blood_give"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/bloodGive"
+        app:layout_constraintStart_toStartOf="@id/bloodGive"
+        app:layout_constraintTop_toBottomOf="@id/bloodGive" />
+
+    <TextView
+        android:id="@+id/tvThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/thanks"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/thx"
+        app:layout_constraintStart_toStartOf="@id/thx"
+        app:layout_constraintTop_toBottomOf="@id/thx" />
+
+    <View
+        android:id="@+id/seperator2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@color/seperator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBloodReceivedlabel" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:src="@drawable/ic_search_donor"
+        app:layout_constraintEnd_toStartOf="@id/guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seperator2" />
+
+    <TextView
+        android:id="@+id/img1label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/search_donor"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img1"
+        app:layout_constraintStart_toStartOf="@id/img1"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+    <TextView
+        android:id="@+id/img1sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imgsub1"
+        android:textColor="@color/font_desc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@id/img1label"
+        app:layout_constraintStart_toStartOf="@id/img1label"
+        app:layout_constraintTop_toBottomOf="@+id/img1label" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:src="@drawable/ic_blood_needed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidline"
+        app:layout_constraintTop_toBottomOf="@id/seperator2" />
+
+    <TextView
+        android:id="@+id/img2label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/blood_needed"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img2"
+        app:layout_constraintStart_toStartOf="@id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+    <TextView
+        android:id="@+id/img2sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/img2sub"
+        android:textColor="@color/font_desc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@id/img2label"
+        app:layout_constraintStart_toStartOf="@id/img2label"
+        app:layout_constraintTop_toBottomOf="@+id/img2label" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_70dp"
+        android:src="@drawable/ic_message"
+        app:layout_constraintEnd_toStartOf="@id/guidline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img1" />
+
+    <TextView
+        android:id="@+id/img3label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/msg"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img3"
+        app:layout_constraintStart_toStartOf="@id/img3"
+        app:layout_constraintTop_toBottomOf="@+id/img3" />
+
+    <TextView
+        android:id="@+id/img3sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imgsub3"
+        android:textColor="@color/font_desc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@id/img3label"
+        app:layout_constraintStart_toStartOf="@id/img3label"
+        app:layout_constraintTop_toBottomOf="@+id/img3label" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_70dp"
+        android:src="@drawable/ic_donor_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/img1" />
+
+    <TextView
+        android:id="@+id/img4label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/report"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img4"
+        app:layout_constraintStart_toStartOf="@id/img4"
+        app:layout_constraintTop_toBottomOf="@+id/img4" />
+
+    <TextView
+        android:id="@+id/img4sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/imgsub4"
+        android:textColor="@color/font_desc"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@id/img4label"
+        app:layout_constraintStart_toStartOf="@id/img4label"
+        app:layout_constraintTop_toBottomOf="@+id/img4label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

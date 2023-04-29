@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue">
+
+    <!-- 28 April 10102905 Johndy Panca IF10k-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_welcome_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/username"
+        android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:backgroundTint="@color/white"
+        android:hint="@string/password"
+        android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:backgroundTint="@color/light_blue"
+        android:padding="@dimen/_20dp"
+        android:text="@string/login"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_2dp" />
+
+    <TextView
+        android:id="@+id/tvOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:text="@string/or"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFb"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:backgroundTint="@color/light_blue"
+        android:insetTop="@dimen/_0dp"
+        android:insetBottom="@dimen/_0dp"
+        android:text="@string/connect_facebook"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        app:icon="@drawable/ic_welcome_fb_login"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOr"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1dp" />
+
+    <TextView
+        android:id="@+id/registerA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="@string/doesnt"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
